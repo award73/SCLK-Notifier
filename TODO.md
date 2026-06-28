@@ -42,3 +42,13 @@ This is the shared backlog for SCLK Notifier. Prefer small pull requests that co
 - [ ] Add issue templates for bug reports and feature requests.
 - [ ] Consider a tiny web dashboard only if Discord commands become awkward.
 - [ ] Consider Docker after a hosted deployment target is selected.
+
+## Future Direction - Committee Management
+
+- [ ] Decide whether committee management belongs in this bot or should become a separate tool.
+- [ ] Keep committee management out of the reminder/agenda MVP until the core bot is stable.
+- [ ] Explore converting agenda items into follow-ups that can be delegated, carried over, closed, or revisited.
+- [ ] Explore simple committee owner tracking for Alumni Board use before adding new Discord channels or permissions.
+- [ ] Prefer extending the existing Discord slash-command bot first if this moves forward.
+- [ ] Avoid a highly configurable role/permission platform until multiple real committee workflows require it.
+- [ ] See `specs/002-committee-management-backlog/spec.md` for the speculative backlog note.
