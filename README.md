@@ -4,6 +4,10 @@ SCLK Notifier is a Discord bot for alumni meeting reminders and agenda collectio
 
 The bot uses native Discord Scheduled Events as the source of truth. Admins create and edit meetings in Discord, and the bot reads those events, tracks reminder state in SQLite, and posts custom reminders to a configured announcement channel.
 
+## Member Guide
+
+For basic Discord commands and how to add agenda items, see the [bot guide](docs/BOT_GUIDE.md).
+
 ## Quick Start For Testers
 
 The app lives in `discord-alumni-reminder-bot/`.

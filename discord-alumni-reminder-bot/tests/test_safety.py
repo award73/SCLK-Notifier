@@ -117,6 +117,16 @@ class SafetyTestCase(unittest.TestCase):
         )
         self.assertEqual(board_lines[1:], alumni_lines[1:])
 
+    def test_notification_composer_includes_agenda_help_and_guide_link(self) -> None:
+        event = bot.get_tracked_event(self.event_id)
+
+        lines = bot.compose_reminder_lines(event, bot.config, "seven_day", f"<@&{bot.config.alumni_role_id}>")
+
+        self.assertIn("Add an agenda item with:", lines)
+        self.assertIn('/agenda_add item:"Your topic here"', lines)
+        self.assertIn("Learn more about the bot:", lines)
+        self.assertIn(bot.BOT_GUIDE_URL, lines)
+
     def test_public_message_truncation_preserves_footer(self) -> None:
         lines = ["Meeting time: <t:123:F>", "Discord event:", "https://discord.com/events/1/2", "x" * 3000]
 

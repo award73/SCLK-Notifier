@@ -16,6 +16,7 @@ from dotenv import load_dotenv
 
 
 DB_PATH = Path(__file__).with_name("alumni_bot.db")
+BOT_GUIDE_URL = "https://github.com/award73/SCLK-Notifier/blob/main/docs/BOT_GUIDE.md"
 AGENDA_ITEM_LIMIT = 500
 AGENDA_EVENT_LIMIT = 25
 SQLITE_TIMEOUT_SECONDS = 30
@@ -624,7 +625,15 @@ def compose_reminder_lines(
                 '/agenda_add item:"Your topic here"',
             ]
         )
-    lines.extend(["", "Please RSVP on the Discord event."])
+    lines.extend(
+        [
+            "",
+            "Learn more about the bot:",
+            BOT_GUIDE_URL,
+            "",
+            "Please RSVP on the Discord event.",
+        ]
+    )
     return lines
 
 
